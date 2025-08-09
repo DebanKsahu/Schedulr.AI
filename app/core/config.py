@@ -28,7 +28,7 @@ class Settings(
     DBSettings
 ):
     model_config = {
-        "env_file": ("envs/google_services.env","envs/db.env")
+        "env_file": ".env"
     }
 
 settings = Settings() #type: ignore
