@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.database.postgres.setup_postgres import engine, init_db, close_db
 from app.api.v1.login import login_router
+from app.api.v1.routes.schedule import schedule_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -22,3 +23,4 @@ app.add_middleware(
     allow_headers = ["*"]
 )
 app.include_router(login_router)
+app.include_router(schedule_router)

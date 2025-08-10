@@ -1,3 +1,4 @@
+from datetime import datetime
 from sqlmodel import SQLModel, Field
 
 class UserInDB(SQLModel, table=True):
@@ -6,3 +7,4 @@ class UserInDB(SQLModel, table=True):
     name: str = Field(min_length=1)
     access_token: str = Field(min_length=1)
     refresh_token: str = Field(min_length=1)
+    expire_time: datetime 

@@ -1,10 +1,12 @@
-from sqlmodel import SQLModel
+from pydantic import BaseModel
 
-class ScheduleRequest(SQLModel):
+class ScheduleRequest(BaseModel):
+    user_id: str
     thread_id: str
     user_query: str
 
-class ScheduleResponse(SQLModel):
+class ScheduleResponse(BaseModel):
+    user_id: str
     thread_id: str
     response: str
     is_final: str

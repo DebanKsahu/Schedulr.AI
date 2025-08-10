@@ -1,5 +1,6 @@
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncEngine
 from app.core.config import settings
+from app.database.models.user_info_models import UserInDB
 from sqlmodel import SQLModel
 
 engine = create_async_engine(

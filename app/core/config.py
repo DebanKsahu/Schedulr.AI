@@ -9,15 +9,14 @@ class GoogleServiceSettings(BaseSettings):
     AUTH_PROVIDER_X509_CERT_URL: str
     CLIENT_SECRET: str
     SERVER_METADATA_URL: str
+    GEMINI_API_KEY: str
     SCOPES: List[str] = [
         "openid",
         "email",
         "profile",
         "https://www.googleapis.com/auth/calendar.events",
-        "https://www.googleapis.com/auth/contacts.readonly"
-    ]
-    REDIRECT_URLS: List[str] = [
-
+        "https://www.googleapis.com/auth/contacts.readonly",
+        "https://www.googleapis.com/auth/calendar"
     ]
 
 class DBSettings(BaseSettings):
